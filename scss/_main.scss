@@ -1,10 +1,76 @@
-.main {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+.nav-table {
+    align-items: center;
+    width: 100%;
 }
 
 .navbar-nav {
-    font-size: 18px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+
+    .nav-item {
+        padding: 30px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        font-size: 18px;
+    }
 }
 
+.line {
+
+    hr {
+        height: 2px;
+        border: 0;
+        background: black;
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/*------------------------end of header----------------------------------------*/
+/*------------------------the about me block-----------------------------------*/
+.about-me {
+    background-color: $only-grey;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+    .about-block {
+
+        .title {
+            @include titles;
+        }
+
+        .about-description {
+            color: #000000;
+            font-family: Open Sans, sans-serif;
+            font-weight: 400;
+            text-align: center;
+            font-size: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 700px;
+            line-height: 116%;
+        }
+
+        .bottom {
+            padding-bottom: 39px;
+        }
+    }
+}
+
+/*------------------------end of the about me block-----------------------------------*/
+/*------------------------the portfolio block-----------------------------------*/
+
+.portfolio {
+
+    .portfolio-block {
+
+        .title {
+            @include titles;
+        }
+    }
+}
