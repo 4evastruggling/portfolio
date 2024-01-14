@@ -11,24 +11,14 @@ footer {
         }
 
         .call {
-            background-color: #000000;
-            padding: 12px 24px;
-            font-size: 18px;
-            border-radius: 26px;
-            border: solid 1px #000000;
-            text-decoration: none;
-            color: #FFFFFF;
+            @include buttons;
         }
 
         .call:hover {
-            background-color: $only-grey;
-            color: #000000;
-            transition: 0.3s;
+            @include button-hover;
         }
     }
 }
-
-
 
 .menu-contacts {
     display: flex;
@@ -39,9 +29,6 @@ footer {
     margin: 0;
     padding-left: 0;
 }
-
-
-
 
 
 .messenger {
