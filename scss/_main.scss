@@ -90,19 +90,15 @@
 
             .container-buttons {
                 position: absolute;
+                width: 100%;
+                height: 100%;
             }
 
-            .swiper-button-prev {
-                font-size: 24px;
-                font-weight: 500;
-                padding: 50px 80px;
-
-            }
-
-            .swiper-button-next {
-                font-size: 24px;
-                font-weight: 500;
-
+            .swiper-button-prev, .swiper-button-next {
+                font-size: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 0;
             }
         }
 
