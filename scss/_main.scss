@@ -24,7 +24,7 @@
         height: 2px;
         border: 0;
         background: black;
-        max-width: 80%;
+        max-width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -35,17 +35,18 @@
 
 .meet-me {
     background-color: $only-grey;
+    text-align: center;
     
     .meet-me-content {
         margin-top: 10px;
         margin-bottom: 10px;
-        margin-left: 20px;
         position: relative;
+        padding: 15%;
 
         .face-pic {
             max-width: 100%;
             border-radius: 120px;
-            padding: 15%;
+            
         }
     }
 }
@@ -89,19 +90,21 @@
         padding-bottom: 50px;
     }
 
+    .project-button {
+        @include buttons;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-button:hover {
+        @include button-hover;
+    }
+
     .projects {
         text-align: center;
         margin-bottom: 50px;
 
-        .project-button {
-            @include buttons;
-
-        }
-
-        .project-button:hover {
-            @include button-hover;
-        }
-
+       
         .swiper {
             display: flex;
             flex-direction: row;
@@ -123,12 +126,17 @@
         }
 
         .swiper-slide {
+            border: solid 1px #000;
 
+            .swiper-link {
+                text-decoration: none;
+                color: #000;
+            }
             .swiper-img {
                 max-width: 100%;
                 position: relative;
-                border: solid 1px #000;
                 padding: 50px;
+                padding-bottom: 0px;
                 margin-bottom: 50px;
             }
         }
