@@ -22,10 +22,9 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href=""></a>Home</li>
-                            <li class="nav-item"><a class="nav-link" href="#AboutMeSection"></a>About me</li>
-                            <li class="nav-item"><a class="nav-link" href=""></a>Portfolio</li>
-                            <li class="nav-item"><a class="nav-link" href=""></a>Contacts</li>
+                            <li class="nav-item"><a class="nav-link" href=""><b>Home</b></a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,28 +33,48 @@
         <div class="line">
             <hr>
         </div>
-
-        <section class="about-me">
+        <section class="meet-me">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="about-block">
-                            <h1 class="title">About me</h1>
-                            <p class="about-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt ducimus
-                                dicta eligendi repudiandae? Delectus voluptas rerum itaque cum eaque officia. Velit
-                                error voluptatem ipsum, iusto quo labore inventore voluptate.
-                            </p>
-                            <p class="about-description bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Blanditiis dolorem illo quae velit aut placeat itaque? Architecto, rem mollitia. Aut
-                                possimus perspiciatis deserunt! Est corrupti consequuntur totam? Quidem, inventore
-                                eligendi.
-                            </p>
+                    <div class="col-sm-4">
+                        <div class="meet-me-content">
+                            <picture>
+                                <source srcset="img/me.webp" type="image/webp"><img class="face-pic" src="img/me.png"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="meet-me-content">
+                            <h1 class="title">Elina Baulina</h1>
+                            <p about-description> Junior Frontend Developer. <br> Business Development Copywriter. <br> Crochet Lover.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="meet-me-content">
+                            <ul class="menu-contacts">
+                                <li><a class="messenger" href="https://wa.me/381645310923">
+                                        <picture>
+                                            <source srcset="img/whatsapp.webp" type="image/webp"><img class="messenger-pic"
+                                                src="img/whatsapp.png" loading="lazy">
+                                        </picture>
+                                    </a>
+                                </li>
+                                <li><a class="messenger" href="https://telegram.me/evastruggling">
+                                        <picture>
+                                            <source srcset="img/telegram.webp" type="image/webp"><img class="messenger-pic"
+                                                src="img/telegram.png" loading="lazy">
+                                        </picture>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        
 
         <section class="portfolio">
             <div class="container">
@@ -101,7 +120,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer-contacts">
+            <div class="footer-contacts" id="contacts">
                 <p class="footer-description"><b>Want to know more or just chat? You are welcome!</b></p>
                 <a class="call" href="mailto:elina.baulina@gmail.com" title="Call me"><b>elina.baulina@gmail.com</b></a>
                 <p class="footer-description last">Or shoot me a message via:</p>
