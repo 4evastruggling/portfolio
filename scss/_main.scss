@@ -89,17 +89,17 @@
         @include descriptions;
         padding-bottom: 50px;
     }
+    .check{
+        text-align: center;
 
     .project-button {
         @include buttons;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .project-button:hover {
         @include button-hover;
     }
-
+}
     .projects {
         text-align: center;
         margin-bottom: 50px;
@@ -127,6 +127,7 @@
 
         .swiper-slide {
             border: solid 1px #000;
+            border-radius: 27px;
 
             .swiper-link {
                 text-decoration: none;
@@ -141,4 +142,42 @@
             }
         }
     }
+}
+/*____________________________second page-portfolio____________________*/
+
+.separate-site {
+    margin-top: 50px;
+    border: #000 solid 1px;
+    border-radius: 27px;
+
+    .site-pic {
+        width: 100%;
+        padding: 10%;
+        border-radius: 45px;
+    }
+
+    .site-titles {
+       text-align: center;
+       font-size: 20px;
+       text-decoration: none;
+    }
+    
+    .site-description {
+        text-align: center;
+        width: 80%;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+        text-decoration: none;
+    }
+}
+
+.site-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.site-link:hover {
+    color: #000;
 }
