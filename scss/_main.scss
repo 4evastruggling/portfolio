@@ -46,7 +46,7 @@
         .face-pic {
             max-width: 100%;
             border-radius: 120px;
-            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
 }
@@ -71,6 +71,7 @@
         }
 
         .bottom {
+            padding-top: 15px;
             padding-bottom: 39px;
         }
     }
@@ -106,6 +107,7 @@
 
        
         .swiper {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             display: flex;
             flex-direction: row;
             position: relative;
@@ -126,12 +128,15 @@
         }
 
         .swiper-slide {
-            border: solid 1px #000;
-            border-radius: 27px;
+           
+            
+           
 
             .swiper-link {
                 text-decoration: none;
                 color: #000;
+                font-size: 25px;
+
             }
             .swiper-img {
                 max-width: 100%;
@@ -139,6 +144,7 @@
                 padding: 50px;
                 padding-bottom: 0px;
                 margin-bottom: 50px;
+                
             }
         }
     }
@@ -149,6 +155,7 @@
     margin-top: 50px;
     border: #000 solid 1px;
     border-radius: 27px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     .site-pic {
         width: 100%;
@@ -180,4 +187,19 @@
 
 .site-link:hover {
     color: #000;
+}
+
+/*_______________separate-project-page________________________________*/
+
+.full-size-pic {
+    max-width: 100%;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.visit-pic {
+    max-width: 100%;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
