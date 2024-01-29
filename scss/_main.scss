@@ -35,21 +35,18 @@
 
 .meet-me {
     background-color: $only-grey;
-    text-align: left;
-    position: relative;
     
-
     .meet-me-content {
         padding: 5%;
-        justify-content: center;
-        
+        margin-left: auto;
+        margin-right: auto;
+
         .face-pic {
             max-width: 100%;
             width: 200px;
             border-radius: 120px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin-right: auto;
-
+            margin-top: 15px;
         }
 
         .contacts-change {
@@ -57,10 +54,10 @@
         }
 
         .name {
-            padding-top: 15%;
+            padding-top: 15px;
         }
         .skill {
-            padding-top: 15%;
+           padding-top: 30px;
         }
     }
 
@@ -117,7 +114,6 @@
         text-align: center;
         margin-bottom: 50px;
 
-
         .swiper {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             display: flex;
@@ -145,7 +141,6 @@
                 text-decoration: none;
                 color: #000;
                 font-size: 25px;
-
             }
 
             .swiper-img {
@@ -154,7 +149,6 @@
                 padding: 50px;
                 padding-bottom: 0px;
                 margin-bottom: 50px;
-
             }
         }
     }
