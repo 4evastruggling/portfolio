@@ -37,9 +37,6 @@
     background-color: $only-grey;
     
     .meet-me-content {
-        padding: 5%;
-        margin-left: auto;
-        margin-right: auto;
 
         .face-pic {
             max-width: 100%;
@@ -47,6 +44,8 @@
             border-radius: 120px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: auto;
         }
 
         .contacts-change {
@@ -54,10 +53,10 @@
         }
 
         .name {
-            padding-top: 15px;
+            margin-top: 30px;
         }
         .skill {
-           padding-top: 30px;
+           margin-top: 30px;
         }
     }
 
