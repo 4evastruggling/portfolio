@@ -1,209 +1,204 @@
-.nav-table {
-    align-items: center;
-    width: 100%;
-}
-
-.navbar-nav {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-
-    .nav-item {
-        padding: 30px;
-        padding-top: 20px;
-        padding-bottom: 25px;
-        font-size: 18px;
+.main {
+    font-family: Gilroy-Regular, sans-serif;
+    .nav-table {
+        align-items: center;
+        width: 100%;
     }
-}
 
-.line {
-
-    hr {
-        height: 2px;
-        border: 0;
-        background: black;
-        max-width: 90%;
-        margin-right: auto;
+    .navbar-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
         margin-left: auto;
-    }
-}
+        margin-right: auto;
 
-/*------------------------end of header----------------------------------------*/
-/*------------------------the meet me block-----------------------------------*/
-
-.meet-me {
-    background-color: $only-grey;
-    
-    .meet-me-content {
-
-        .face-pic {
-            max-width: 100%;
-            width: 200px;
-            border-radius: 120px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin-top: 15px;
-            margin-bottom: 15px;
-            margin-left: auto;
-        }
-
-        .contacts-change {
-            justify-content: left;
-        }
-
-        .name {
-            margin-top: 30px;
-        }
-        .skill {
-           margin-top: 30px;
+        .nav-item {
+            padding: 30px;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            font-size: 18px;
         }
     }
 
-}
+    /*------------------------end of header----------------------------------------*/
+    /*------------------------the meet me block-----------------------------------*/
 
-/*------------------------end of meet me----------------------------------------*/
-/*------------------------the about me block-----------------------------------*/
-.about-me {
-    background-color: $only-grey;
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
+    .meet-me {
+        background-color: $only-grey;
 
-    .about-block {
+        .meet-me-content {
+
+            .face-pic {
+                max-width: 100%;
+                width: 200px;
+                border-radius: 120px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-left: auto;
+            }
+
+            .contacts-change {
+                justify-content: left;
+            }
+
+            .name {
+                margin-top: 30px;
+            }
+
+            .skill {
+                margin-top: 30px;
+            }
+        }
+
+    }
+
+    /*------------------------end of meet me----------------------------------------*/
+    /*------------------------the about me block-----------------------------------*/
+    .about-me {
+        background-color: $only-grey;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+
+        .about-block {
+
+            .title {
+                @include titles;
+            }
+
+            .about-description {
+
+                @include descriptions;
+            }
+
+            .bottom {
+                padding-top: 15px;
+                padding-bottom: 39px;
+            }
+        }
+    }
+
+    /*------------------------end of the about me block-----------------------------------*/
+    /*------------------------the portfolio block-----------------------------------*/
+
+    .portfolio-block {
 
         .title {
             @include titles;
         }
 
-        .about-description {
+        .check {
+            text-align: center;
 
-            @include descriptions;
-        }
-
-        .bottom {
-            padding-top: 15px;
-            padding-bottom: 39px;
-        }
-    }
-}
-
-/*------------------------end of the about me block-----------------------------------*/
-/*------------------------the portfolio block-----------------------------------*/
-
-.portfolio-block {
-
-    .title {
-        @include titles;
-    }
-
-    .check {
-        text-align: center;
-
-        .project-button {
-            @include buttons;
-        }
-
-        .project-button:hover {
-            @include button-hover;
-        }
-    }
-
-    .projects {
-        text-align: center;
-        margin-bottom: 50px;
-
-        .swiper {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            display: flex;
-            flex-direction: row;
-            position: relative;
-
-            .container-buttons {
-                position: absolute;
-                width: 100%;
-                height: 100%;
+            .project-button {
+                @include buttons;
             }
 
-            .swiper-button-prev,
-            .swiper-button-next {
-                font-size: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 0;
+            .project-button:hover {
+                @include button-hover;
             }
         }
 
-        .swiper-slide {
+        .projects {
+            text-align: center;
+            margin-bottom: 50px;
 
-            .swiper-link {
-                text-decoration: none;
-                color: #000;
-                font-size: 25px;
-            }
-
-            .swiper-img {
-                max-width: 100%;
+            .swiper {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                display: flex;
+                flex-direction: row;
                 position: relative;
-                padding: 50px;
-                padding-bottom: 0px;
-                margin-bottom: 50px;
+
+                .container-buttons {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    font-size: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 0;
+                    color: #000;
+                }
+            }
+
+            .swiper-slide {
+
+                .swiper-link {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 25px;
+                }
+
+                .swiper-img {
+                    max-width: 100%;
+                    position: relative;
+                    padding: 50px;
+                    padding-bottom: 0px;
+                    margin-bottom: 50px;
+                }
             }
         }
     }
-}
 
-/*____________________________second page-portfolio____________________*/
+    /*____________________________second page-portfolio____________________*/
 
-.separate-site {
-    margin-top: 50px;
-    border: #000 solid 1px;
-    border-radius: 27px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    .site-pic {
-        width: 100%;
-        padding: 10%;
+    .separate-site {
+        margin-top: 50px;
         border-radius: 45px;
-    }
-
-    .site-titles {
-        text-align: center;
-        font-size: 20px;
-        text-decoration: none;
-    }
-
-    .site-description {
-        text-align: center;
-        width: 80%;
-        font-size: 16px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        max-width: 90%;
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: 10px;
-        text-decoration: none;
+
+        .site-pic {
+            width: 100%;
+            padding-bottom: 50px;
+            border-radius: 45px;
+        }
+
+        .site-titles {
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .site-description {
+            text-align: center;
+            width: 80%;
+            font-size: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 50px;
+            text-decoration: none;
+        }
     }
-}
 
-.site-link {
-    text-decoration: none;
-    color: #000;
-}
+    .site-link {
+        text-decoration: none;
+        color: #000;
+    }
 
-.site-link:hover {
-    color: #000;
-}
+    .site-link:hover {
+        color: #000;
+    }
 
-/*_______________separate-project-page________________________________*/
+    /*_______________separate-project-page________________________________*/
 
-.full-size-pic {
-    max-width: 100%;
-    margin-top: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+    .full-size-pic {
+        max-width: 100%;
+        margin-top: 50px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 
-.visit-pic {
-    max-width: 100%;
-    height: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
+    .visit-pic {
+        max-width: 100%;
+        height: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
