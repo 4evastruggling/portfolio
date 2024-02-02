@@ -1,5 +1,6 @@
 .main {
     font-family: Gilroy-Regular, sans-serif;
+
     .nav-table {
         align-items: center;
         width: 100%;
@@ -14,9 +15,7 @@
 
         .nav-item {
             padding: 30px;
-            padding-top: 20px;
-            padding-bottom: 25px;
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 
@@ -26,31 +25,43 @@
     .meet-me {
         background-color: $only-grey;
 
-        .meet-me-content {
+        .meet-wrap {
+            display: flex;
+            flex-direction: row;
+            position: relative;
 
-            .face-pic {
-                max-width: 100%;
-                width: 200px;
-                border-radius: 120px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                margin-top: 15px;
-                margin-bottom: 15px;
-                margin-left: auto;
-            }
+            .meet-me-content {
 
-            .contacts-change {
-                justify-content: left;
-            }
+                margin-top: auto;
+                margin-bottom: auto;
 
-            .name {
-                margin-top: 30px;
-            }
+                .face-pic {
+                    max-width: 100%;
+                    width: 300px;
+                    border-radius: 27px;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                    margin: 35px;
 
-            .skill {
-                margin-top: 30px;
+                    margin-left: 150px;
+
+                }
+
+                .contacts-change {
+                    justify-content: left;
+
+                }
+
+                .name {
+                    font-size: 54px;
+                    padding-right: 100px;
+                }
+
+                .skill {
+                    font-family: Gilroy-Bold;
+                }
+
             }
         }
-
     }
 
     /*------------------------end of meet me----------------------------------------*/
@@ -64,17 +75,18 @@
         .about-block {
 
             .title {
+
                 @include titles;
+
             }
 
             .about-description {
-
                 @include descriptions;
             }
 
             .bottom {
-                padding-top: 15px;
-                padding-bottom: 39px;
+                padding-top: 20px;
+                padding-bottom: 40px;
             }
         }
     }
@@ -85,6 +97,8 @@
     .portfolio-block {
 
         .title {
+            margin-top: 50px;
+            margin-bottom: 50px;
             @include titles;
         }
 
@@ -93,6 +107,7 @@
 
             .project-button {
                 @include buttons;
+
             }
 
             .project-button:hover {
@@ -102,10 +117,11 @@
 
         .projects {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
 
             .swiper {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
                 display: flex;
                 flex-direction: row;
                 position: relative;
@@ -119,25 +135,31 @@
                 .swiper-button-prev,
                 .swiper-button-next {
                     font-size: 0;
-                    top: 50%;
                     transform: translateY(-50%);
                     font-size: 0;
                     color: #000;
+                    --swiper-navigation-size: 80px;
+                    top: calc(50% + 75px);
+
                 }
+
             }
 
             .swiper-slide {
 
-                .swiper-link {
+                .swiper-title {
                     text-decoration: none;
                     color: #000;
-                    font-size: 25px;
+                    font-size: 28px;
+                    margin-top: 50px;
+                    margin-bottom: 20px;
                 }
 
                 .swiper-img {
-                    max-width: 100%;
+                    max-width: 95%;
                     position: relative;
                     padding: 50px;
+                    padding-top: 0px;
                     padding-bottom: 0px;
                     margin-bottom: 50px;
                 }
@@ -150,7 +172,7 @@
     .separate-site {
         margin-top: 50px;
         border-radius: 45px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -163,24 +185,27 @@
 
         .site-titles {
             text-align: center;
-            font-size: 20px;
+            font-size: 24px;
             text-decoration: none;
         }
 
         .site-description {
+            font-family: Gilroy-Regular;
             text-align: center;
             width: 80%;
-            font-size: 16px;
+            font-size: 20px;
             margin-left: auto;
             margin-right: auto;
-            padding-bottom: 50px;
+            padding-bottom: 55px;
             text-decoration: none;
         }
     }
 
     .site-link {
-        text-decoration: none;
-        color: #000;
+        @include buttons;
+        font-family: Gilroy-Bold;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .site-link:hover {
@@ -192,7 +217,7 @@
     .full-size-pic {
         max-width: 100%;
         margin-top: 50px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     }
 
     .visit-pic {
