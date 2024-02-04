@@ -15,10 +15,11 @@ footer {
         .call {
            font-size: 24px;
            color: #000;
+           transform: 0.3s;
         }
 
         .call:hover {
-            @include button-hover;
+            color: $dark-grey;
         }
         
     }

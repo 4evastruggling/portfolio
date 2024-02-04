@@ -14,7 +14,7 @@
         margin-right: auto;
 
         .nav-item {
-            padding: 30px;
+            padding: 20px;
             font-size: 20px;
         }
     }
@@ -46,10 +46,10 @@
                 margin-top: auto;
                 margin-bottom: auto;
                 margin-left: 5%;
-                
+
 
                 .contacts-change {
-                    
+
                     margin-top: 40px;
                 }
 
@@ -89,6 +89,17 @@
             .bottom {
                 padding-top: 20px;
                 padding-bottom: 40px;
+            }
+
+            .project-link {
+
+                color: #000;
+                font-family: Gilroy-Bold;
+                transition: 0.3s;
+            }
+
+            .project-link:hover {
+                color: $dark-grey;
             }
         }
     }
@@ -204,7 +215,6 @@
         }
     }
 
-
     .site-link {
         @include buttons;
         max-width: 250px;
@@ -213,12 +223,13 @@
         margin-right: auto;
         text-align: center;
         font-family: Gilroy-Bold;
-
+        transform: 0.3s;
     }
 
-
     .site-link:hover {
-        color: #000;
+        background-color: $only-grey;
+        color: #000000;
+        transition: 0.3s;
     }
 
     /*_______________separate-project-page________________________________*/
@@ -236,3 +247,6 @@
         margin-bottom: auto;
     }
 }
+
+/*----text*/
+
