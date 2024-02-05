@@ -1,252 +1,336 @@
 .main {
     font-family: Gilroy-Regular, sans-serif;
 
-    .nav-table {
-        align-items: center;
-        width: 100%;
-    }
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
-    .navbar-nav {
-        list-style: none;
+.nav-table {
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+
+    .nav-item {
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+
+/*------------------------end of header----------------------------------------*/
+/*------------------------the meet me block-----------------------------------*/
+
+.meet-me {
+    background-color: $only-grey;
+    padding-left: 10%;
+
+    .meet-wrap {
         display: flex;
         flex-direction: row;
-        margin-left: auto;
-        margin-right: auto;
+        position: relative;
 
-        .nav-item {
-            padding: 20px;
-            font-size: 20px;
+
+        .meet-me-content-1 {
+            .face-pic {
+                max-width: 100%;
+                max-height: 380px;
+                border-radius: 27px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                margin: 5%;
+            }
+        }
+
+        .meet-me-content-2 {
+
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 5%;
+
+
+            .contacts-change {
+
+                margin-top: 40px;
+            }
+
+            .name {
+                font-size: 54px;
+                padding-top: 40px;
+            }
+
+            .skill {
+                font-family: Gilroy-Bold;
+            }
+
+        }
+    }
+}
+
+/*------------------------end of meet me----------------------------------------*/
+/*------------------------the about me block-----------------------------------*/
+.about-me {
+    background-color: $only-grey;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+    .about-block {
+
+        .title {
+
+            @include titles;
+
+        }
+
+        .about-description {
+            @include descriptions;
+        }
+
+        .bottom {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        .project-link {
+
+            color: #000;
+            font-family: Gilroy-Bold;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            color: $dark-grey;
+        }
+    }
+}
+
+/*------------------------end of the about me block-----------------------------------*/
+/*------------------------the portfolio block-----------------------------------*/
+
+.portfolio-block {
+
+    .title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        @include titles;
+    }
+
+    .check {
+        text-align: center;
+
+        .project-button {
+            @include buttons;
+        }
+
+        .project-button:hover {
+            @include button-hover;
         }
     }
 
-    /*------------------------end of header----------------------------------------*/
-    /*------------------------the meet me block-----------------------------------*/
+    .projects {
+        text-align: center;
+        margin-bottom: 80px;
 
-    .meet-me {
-        background-color: $only-grey;
-
-        .meet-wrap {
+        .swiper {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
             display: flex;
             flex-direction: row;
             position: relative;
-            padding-left: 10%;
 
-            .meet-me-content-1 {
-                .face-pic {
-                    max-width: 100%;
-                    max-height: 400px;
-                    border-radius: 27px;
-                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-                    margin: 5%;
-                }
+            .container-buttons {
+                position: absolute;
+                width: 100%;
+                height: 100%;
             }
 
-            .meet-me-content-2 {
-
-                margin-top: auto;
-                margin-bottom: auto;
-                margin-left: 5%;
-
-
-                .contacts-change {
-
-                    margin-top: 40px;
-                }
-
-                .name {
-                    font-size: 54px;
-                    padding-top: 40px;
-                }
-
-                .skill {
-                    font-family: Gilroy-Bold;
-                }
-
-            }
-        }
-    }
-
-    /*------------------------end of meet me----------------------------------------*/
-    /*------------------------the about me block-----------------------------------*/
-    .about-me {
-        background-color: $only-grey;
-        background-size: cover;
-        overflow: hidden;
-        position: relative;
-
-        .about-block {
-
-            .title {
-
-                @include titles;
-
-            }
-
-            .about-description {
-                @include descriptions;
-            }
-
-            .bottom {
-                padding-top: 20px;
-                padding-bottom: 40px;
-            }
-
-            .project-link {
-
+            .swiper-button-prev,
+            .swiper-button-next {
+                font-size: 0;
+                transform: translateY(-50%);
+                font-size: 0;
                 color: #000;
-                font-family: Gilroy-Bold;
-                transition: 0.3s;
+                --swiper-navigation-size: 80px;
+                top: calc(50% + 75px);
+
             }
 
-            .project-link:hover {
-                color: $dark-grey;
+        }
+
+        .swiper-slide {
+
+            .swiper-title {
+                text-decoration: none;
+                color: #000;
+                font-size: 28px;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+
+            .swiper-img {
+                max-width: 95%;
+                position: relative;
+                padding: 50px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                margin-bottom: 50px;
             }
         }
     }
+}
 
-    /*------------------------end of the about me block-----------------------------------*/
-    /*------------------------the portfolio block-----------------------------------*/
+/*____________________________second page-portfolio____________________*/
+
+.separate-site {
+    margin-top: 50px;
+    border-radius: 45px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35px;
+
+    .site-pic {
+        width: 100%;
+        padding-bottom: 50px;
+        border-radius: 45px;
+    }
+
+    .site-titles {
+        text-align: center;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .site-description {
+        font-family: Gilroy-Regular;
+        text-align: center;
+        width: 80%;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+        text-decoration: none;
+    }
+}
+
+.site-link {
+    @include buttons;
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Gilroy-Bold;
+    transform: 0.3s;
+}
+
+.site-link:hover {
+    background-color: $only-grey;
+    color: #000000;
+    transition: 0.3s;
+}
+
+/*_______________separate-project-page________________________________*/
+
+.full-size-pic {
+    max-width: 100%;
+    margin-top: 50px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.visit-pic {
+    max-width: 100%;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*--media-------------*/
+
+@media (max-width: 992px) {
+
+    .meet-me {
+        text-align: center;
+        padding-left: 0%;
+
+        .meet-wrap {
+            flex-direction: column-reverse;
+
+            .meet-me-content-1 .face-pic {
+                max-height: 300px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .meet-me-content-2 .skills .skill-separate {
+            text-decoration: underline;
+            display: inline;
+            margin-right: 15px;
+        }
+    }
+
+
 
     .portfolio-block {
 
         .title {
-            margin-top: 50px;
-            margin-bottom: 50px;
-            @include titles;
+            padding-top: 10px;
+            font-size: 36px;
+            padding-bottom: 0;
         }
 
-        .check {
-            text-align: center;
-
-            .project-button {
-                @include buttons;
-
-            }
-
-            .project-button:hover {
-                @include button-hover;
-            }
+        .projects .swiper-slide .swiper-title {
+            margin-top: 25px;
         }
 
-        .projects {
-            text-align: center;
-            margin-bottom: 80px;
+        .projects .swiper {
 
-            .swiper {
-                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-
-                display: flex;
-                flex-direction: row;
-                position: relative;
-
-                .container-buttons {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .swiper-button-prev,
-                .swiper-button-next {
-                    font-size: 0;
-                    transform: translateY(-50%);
-                    font-size: 0;
-                    color: #000;
-                    --swiper-navigation-size: 80px;
-                    top: calc(50% + 75px);
-
-                }
-
-            }
-
-            .swiper-slide {
-
-                .swiper-title {
-                    text-decoration: none;
-                    color: #000;
-                    font-size: 28px;
-                    margin-top: 50px;
-                    margin-bottom: 20px;
-                }
-
-                .swiper-img {
-                    max-width: 95%;
-                    position: relative;
-                    padding: 50px;
-                    padding-top: 0px;
-                    padding-bottom: 0px;
-                    margin-bottom: 50px;
-                }
+            .swiper-button-prev,
+            .swiper-button-next {
+                --swiper-navigation-size: 50px;
+                top: calc(50% + 50px);
             }
         }
-    }
-
-    /*____________________________second page-portfolio____________________*/
-
-    .separate-site {
-        margin-top: 50px;
-        border-radius: 45px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 35px;
-
-        .site-pic {
-            width: 100%;
-            padding-bottom: 50px;
-            border-radius: 45px;
-        }
-
-        .site-titles {
-            text-align: center;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        .site-description {
-            font-family: Gilroy-Regular;
-            text-align: center;
-            width: 80%;
-            font-size: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 30px;
-            text-decoration: none;
-        }
-    }
-
-    .site-link {
-        @include buttons;
-        max-width: 250px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        font-family: Gilroy-Bold;
-        transform: 0.3s;
-    }
-
-    .site-link:hover {
-        background-color: $only-grey;
-        color: #000000;
-        transition: 0.3s;
-    }
-
-    /*_______________separate-project-page________________________________*/
-
-    .full-size-pic {
-        max-width: 100%;
-        margin-top: 50px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .visit-pic {
-        max-width: 100%;
-        height: 20px;
-        margin-top: auto;
-        margin-bottom: auto;
     }
 }
 
-/*----text*/
+@media (max-width: 768px) {
 
+    .nav-item {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .face-pic {
+        max-height: 280px;
+    }
+
+    .portfolio-block {
+
+        .title {
+            font-size: 30px;
+        }
+
+        .projects .swiper {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                --swiper-navigation-size: 40px;
+                top: calc(50% + 40px);
+            }
+        }
+
+        .swiper-slide {
+
+            .swiper-title {
+                font-size: 26px;
+            }
+        }
+    }
+}
