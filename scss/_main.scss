@@ -266,16 +266,19 @@
                 max-height: 300px;
                 margin-bottom: 50px;
             }
-        }
 
-        .meet-me-content-2 .skills .skill-separate {
-            text-decoration: underline;
-            display: inline;
-            margin-right: 15px;
+
+            .meet-me-content-2 {
+                margin-left: 0;
+
+                .skills .skill-separate {
+                    text-decoration: underline;
+                    display: inline;
+                    margin-right: 15px;
+                }
+            }
         }
     }
-
-
 
     .portfolio-block {
 
@@ -303,7 +306,7 @@
 @media (max-width: 768px) {
 
     .navbar-nav {
-        
+
         .nav-item {
             font-size: 18px;
             padding: 15px;
@@ -341,9 +344,25 @@
 @media (max-width: 576px) {
 
     .navbar-nav {
-        
+
         .nav-item {
             font-size: 16px;
+        }
+    }
+
+    .face-pic {
+        max-height: 250px;
+    }
+
+    .messenger-pic {
+        height: 42px;
+    }
+
+
+    .meet-me-content-2 {
+
+        .name {
+            font-size: 30px;
         }
     }
 }
