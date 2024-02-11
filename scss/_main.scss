@@ -48,7 +48,6 @@
         }
 
         .meet-me-content-2 {
-
             margin-top: auto;
             margin-bottom: auto;
             margin-left: 5%;
@@ -136,47 +135,51 @@
     .projects {
         text-align: center;
         margin-bottom: 80px;
+        position: relative;
 
         .swiper {
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
             display: flex;
             flex-direction: row;
             position: relative;
 
+
             .container-buttons {
                 position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
                 width: 100%;
                 height: 100%;
+                z-index: 1;
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    font-size: 0;
+                    color: #000;
+                    --swiper-navigation-size: 80px;
+                    top: 65%;
+                    transform: translateY(-50%);
+
+                }
             }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                font-size: 0;
-                transform: translateY(-50%);
-                font-size: 0;
-                color: #000;
-                --swiper-navigation-size: 80px;
-                top: calc(50% + 75px);
-
-            }
-
         }
 
+
+
         .swiper-slide {
+            z-index: 0;
 
             .swiper-title {
                 text-decoration: none;
                 color: #000;
                 font-size: 28px;
-                margin-top: 50px;
-                margin-bottom: 20px;
+                
             }
 
             .swiper-img {
                 max-width: 95%;
                 position: relative;
                 padding: 50px;
-                padding-top: 0px;
+                padding-top: 20px;
                 padding-bottom: 0px;
                 margin-bottom: 50px;
             }
@@ -306,15 +309,20 @@
 @media (max-width: 768px) {
 
     .navbar-nav {
-
         .nav-item {
             font-size: 18px;
             padding: 15px;
         }
     }
 
-    .face-pic {
-        max-height: 280px;
+    .meet-me {
+        .meet-wrap {
+            .meet-me-content-1 {
+                .face-pic {
+                    max-height: 280px;
+                }
+            }
+        }
     }
 
     .portfolio-block {
@@ -350,9 +358,6 @@
         }
     }
 
-    .face-pic {
-        max-height: 250px;
-    }
 
     .messenger-pic {
         height: 42px;
