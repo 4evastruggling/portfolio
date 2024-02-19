@@ -172,7 +172,7 @@
                 text-decoration: none;
                 color: #000;
                 font-size: 28px;
-                
+
             }
 
             .swiper-img {
@@ -189,55 +189,59 @@
 
 /*____________________________second page-portfolio____________________*/
 
-.separate-site {
-    margin-top: 50px;
-    border-radius: 45px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 35px;
-
-    .site-pic {
-        width: 100%;
-        padding-bottom: 50px;
+    .separate-site {
+        margin-top: 50px;
         border-radius: 45px;
-    }
-
-    .site-titles {
-        text-align: center;
-        font-size: 24px;
-        text-decoration: none;
-    }
-
-    .site-description {
-        font-family: Gilroy-Regular;
-        text-align: center;
-        width: 80%;
-        font-size: 20px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        max-width: 95%;
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: 30px;
-        text-decoration: none;
+        padding-bottom: 35px;
+
+        .site-pic {
+            width: 100%;
+            padding-bottom: 50px;
+            border-radius: 45px;
+            object-fit: cover;
+        }
+
+        .site-titles {
+            text-align: center;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .site-description {
+            font-family: Gilroy-Regular;
+            text-align: center;
+            width: 80%;
+            font-size: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 30px;
+            text-decoration: none;
+        }
+
+
+        .site-link {
+            @include buttons;
+            max-width: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: Gilroy-Bold;
+            transform: 0.3s;
+        }
+
+        .site-link:hover {
+            background-color: $only-grey;
+            color: #000000;
+            transition: 0.3s;
+        }
+
     }
-}
 
-.site-link {
-    @include buttons;
-    max-width: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: Gilroy-Bold;
-    transform: 0.3s;
-}
-
-.site-link:hover {
-    background-color: $only-grey;
-    color: #000000;
-    transition: 0.3s;
-}
 
 /*_______________separate-project-page________________________________*/
 
@@ -295,12 +299,12 @@
             margin-top: 25px;
         }
 
-        .projects .swiper {
+        .projects .swiper .container-buttons {
 
             .swiper-button-prev,
             .swiper-button-next {
-                --swiper-navigation-size: 50px;
-                top: calc(50% + 50px);
+                --swiper-navigation-size: 40px;
+                top: calc(50% + 40px);
             }
         }
     }
@@ -331,12 +335,12 @@
             font-size: 30px;
         }
 
-        .projects .swiper {
+        .projects .swiper .container-buttons {
 
             .swiper-button-prev,
             .swiper-button-next {
-                --swiper-navigation-size: 40px;
-                top: calc(50% + 40px);
+                --swiper-navigation-size: 30px;
+                top: calc(50% + 20px);
             }
         }
 
