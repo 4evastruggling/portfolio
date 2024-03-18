@@ -171,9 +171,11 @@
 
             .swiper-title {
                 text-decoration: none;
-                color: #000;
                 font-size: 28px;
 
+                .title-link {
+                    color: #000;
+                }
             }
 
             .swiper-img {
@@ -305,7 +307,7 @@
             .swiper-button-prev,
             .swiper-button-next {
                 --swiper-navigation-size: 40px;
-                top: calc(50% + 40px);
+                top: calc(50% + 50px);
             }
         }
     }
